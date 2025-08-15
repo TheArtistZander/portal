@@ -1,0 +1,78 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.portal {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.half {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.half:hover {
+  transform: scale(1.02);
+}
+
+.tarot {
+  background: linear-gradient(to bottom right, #2c003e, #5e2a84);
+  color: #fff;
+}
+
+.model {
+  background: linear-gradient(to bottom left, #111, #ff4081);
+  color: #fff;
+}
+
+.content {
+  text-align: center;
+  z-index: 2;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.2);
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255,255,255,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .portal {
+    flex-direction: column;
+  }
+
+  .half {
+    height: 50vh;
+  }
+}
